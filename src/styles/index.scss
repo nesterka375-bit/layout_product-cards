@@ -1,3 +1,140 @@
+$main-accent: #060b35;
+$secondary: #616070;
+$white: #fff;
+$blue-accent: #00acdc;
+$gray-elements: #f3f3f3;
+$font-main: Roboto, sans-serif;
+$card-width: 200px;
+$card-height: 408px;
+
 body {
   margin: 0;
+  padding: 0;
+  font-family: $font-main;
+  background-color: $white;
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $card-width;
+  min-height: $card-height;
+  background-color: $white;
+  border: 1px solid $gray-elements;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 0 16px 16px;
+
+  &__image {
+    display: block;
+    margin-top: 32px;
+    width: 160px;
+    height: 134px;
+  }
+
+  &__name {
+    width: 100%;
+    height: 36px;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $main-accent;
+    text-align: left;
+  }
+
+  &__code {
+    margin-top: 4px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $secondary;
+    text-align: left;
+  }
+
+  &__reviews {
+    display: flex;
+    margin-top: 16px;
+    width: 100%;
+    height: 16px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &_stars {
+      display: flex;
+      justify-content: space-between;
+      width: 96px;
+      height: 16px;
+
+      &_star {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../images/star.svg');
+
+        &:nth-child(-n + 4) {
+          background-image: url('../images/star-active.svg');
+        }
+      }
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: $main-accent;
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    height: 18px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+
+    &_label {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $secondary;
+    }
+
+    &_value {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: $main-accent;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    background-color: $blue-accent;
+    color: $white;
+    border-radius: 5px;
+    border: none;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-accent;
+      border: 1px solid $blue-accent;
+      cursor: pointer;
+    }
+  }
 }
