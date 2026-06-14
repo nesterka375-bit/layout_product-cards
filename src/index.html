@@ -9,7 +9,7 @@
     <title>Product cards</title>
     <link
       rel="stylesheet"
-      href="./styles/index.scss"
+      href="./styles/main.scss"
     />
     <link
       rel="preconnect"
@@ -27,43 +27,43 @@
   </head>
   <body>
     <div
-      class="product_card"
+      class="card"
       data-qa="card"
     >
       <img
         src="./images/imac.jpeg"
         alt="iMac 27"
-        class="product_card__image"
+        class="card__image"
       />
 
-      <div class="product_card__name">
+      <div class="card__name">
         APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
       </div>
 
-      <div class="product_card__code">Product code: 195434</div>
+      <div class="card__code">Product code: 195434</div>
 
-      <div class="product_card__reviews">
-        <div class="product_card__reviews_stars">
-          <div class="product_card__reviews_stars_star"></div>
-          <div class="product_card__reviews_stars_star"></div>
-          <div class="product_card__reviews_stars_star"></div>
-          <div class="product_card__reviews_stars_star"></div>
-          <div class="product_card__reviews_stars_star"></div>
+      <div class="card__reviews">
+        <div class="card__reviews-stars stars stars--4">
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
+          <div class="stars__item"></div>
         </div>
-        <div class="product_card__reviews_text">Reviews: 5</div>
+        <div class="card__reviews_text">Reviews: 5</div>
       </div>
 
-      <div class="product_card__price">
-        <div class="product_card__price_label">Price:</div>
-        <div class="product_card__price_value">$2,199</div>
+      <div class="card__price">
+        <div class="card__price_label">Price:</div>
+        <div class="card__price_value">$2,199</div>
       </div>
-
-      <button
-        class="product_card__button"
+      <a
+        href="#"
         data-qa="hover"
+        class="card__button"
       >
         BUY
-      </button>
+      </a>
     </div>
   </body>
 </html>
